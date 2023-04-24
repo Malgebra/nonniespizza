@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <title> {% block title %} {% endblock %} </title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-sclae=1">
+
+</head>
 
 <body>
-    <h1>Items</h1>
-    <ul>
-        {% for x in myitems %}
-        <li>{{x.name}} {{x.description}}</li>
-        {% endfor %}
-    </ul>
-
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Nonnie's Pizza</h1>
+        <p>The best pizza in our kitchen</p>
+    </div>
+    
 
 </body>
 
