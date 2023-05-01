@@ -11,3 +11,9 @@ def menu(request):
         'myitems': myitems,
     }
     return HttpResponse(template.render(context, request))
+
+def menu2(request):
+    categories = Category.objects.prefetch_related('items').all()
+    template = loader.get_template('menu2.html')
+    context = {'categories': categories}
+    return HttpResponse(template.render(context, request))
