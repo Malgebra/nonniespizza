@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
-from .models import Item
+from .models import Item,Category,MENU
 
 def menu(request):
     template = loader.get_template('menu.html')
